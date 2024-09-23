@@ -106,7 +106,7 @@ public struct NumberPad<T>: View
 
     private var decimalPoint: some View {
         Button(action: decimalPointAction) {
-            Text(".")
+            Text(String(config.decimalCharacter))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }

@@ -33,6 +33,8 @@ open class NPBaseConfig<T>: ObservableObject
 
     // MARK: - Public Properties
 
+    public var decimalCharacter: Character { Locale.current.decimalSeparator?.first ?? "." }
+
     public var showDecimalPoint: Bool { false }
 
     public var stringValue: String {

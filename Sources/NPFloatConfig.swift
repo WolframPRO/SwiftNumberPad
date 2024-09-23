@@ -54,7 +54,7 @@ public final class NPFloatConfig<T>: NPBaseConfig<T>
 
     override public func decimalPointAction() -> Bool {
         guard decimalPointIndex == nil else { return false }
-        sValue.append(".")
+        sValue.append(decimalCharacter)
 
         return true
     }
@@ -85,6 +85,6 @@ public final class NPFloatConfig<T>: NPBaseConfig<T>
     }
 
     internal var decimalPointIndex: String.Index? {
-        sValue.firstIndex(of: ".")
+        sValue.firstIndex(of: decimalCharacter)
     }
 }
